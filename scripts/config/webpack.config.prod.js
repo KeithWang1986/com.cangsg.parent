@@ -1,5 +1,6 @@
 const resolveApp = require('./common');
 const file_list = require('../../public/file-list');
+file_list.ext = require.resolve('./ext');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -11,7 +12,7 @@ const config = {
     devtool: shouldUseSourceMap,
     entry: file_list,
     output: {
-        path: resolveApp('public/dist'),
+        path: resolveApp('src/main/resources/static/dist'),
         filename: '[name].js'
     },
     module: {
@@ -22,7 +23,14 @@ const config = {
                     /public\\src/
                 ],
                 //exclude: /node_modules/,//屏蔽不需要处理的文件（文件夹）（可选）
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                  // @remove-on-eject-begin
+                  babelrc: false,
+                  presets: [require.resolve('babel-preset-react-app')],
+                  // @remove-on-eject-end
+                  compact: true,
+                }
             },
             {
                 test: /\.css$/,

@@ -7,5 +7,7 @@
 
 <@page.body>
     <div id="root"></div>
+    
+    <script type="text/javascript" src="/s/${clientnumber}/dist/ext.js"></script>
     <script type="text/javascript" src="/s/${clientnumber}/dist/index.js"></script>
 </@page.body>
