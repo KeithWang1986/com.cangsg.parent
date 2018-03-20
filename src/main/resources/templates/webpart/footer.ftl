@@ -1,1 +1,1 @@
-	<div class="footer">©2016 Cangsg 京ICP备16035037号</div>
+	<div class="footer"><div class="copy">©2016 Cangsg 京ICP备16035037号</div></div>

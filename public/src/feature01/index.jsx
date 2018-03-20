@@ -15,13 +15,25 @@ class App extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            "locale": zh_CN   
-        }  
+            "locale": zh_CN
+        }
     }
 
     OnClick(locale) {
         this.setState({
             "locale": locale
+        });
+        fetch("/api/select").then((response) => {
+            if (response.status !== 200) {
+                throw new Error('Fail to get response with status ' + response.status);
+            }
+            response.json().then((responseJson) => {
+                console.log(responseJson.userName);
+            }).catch((error) => {
+                console.log("");
+            });
+        }).catch((error) => {
+            console.log("");
         });
     }
     render() {
@@ -29,14 +41,14 @@ class App extends React.Component {
             <div>
                 <Provider store={store}>
                     <LocaleProvider locale={this.state.locale}>
-                        <CitySelector />
-                        <Weather />
+                        {/* <CitySelector />
+                        <Weather /> */}
                         <h1>123</h1>
                         <Button value="Button.confirm" onClick={(props, e) => this.OnClick(zh_CN)} />
                         <Button value="Button.cancel" onClick={(props, e) => this.OnClick(en_US)} />
                     </LocaleProvider>
                 </Provider>
-            </div> 
+            </div>
         );
     }
 }
