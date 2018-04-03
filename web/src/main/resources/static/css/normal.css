@@ -1,0 +1,98 @@
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #e0e0e0;
+}
+
+.page-width{
+	width: 1200px;
+}
+
+.page-head {
+	background-color: #90b9d9;
+	padding-top: 15px;
+}
+
+.page-box1 {
+	height: 115px;
+	margin: 0 auto;
+	background-color: rgb(63, 146, 210);
+}
+
+.page-box2{
+	margin: 0 auto;
+	min-height: 500px;
+	background-color: #ffffff;
+	border-top: 1px solid #ffffff;
+}
+
+.page-navigation{
+	margin: 0 auto;
+}
+
+.page-navigation ul{
+	margin: 1px 0;
+    padding: 0;
+    list-style-type: none;
+	display: block;
+	overflow: hidden;
+}
+
+.page-navigation ul li{
+	float: left;
+    margin: 0;
+    padding: 0;
+	width: 20%;
+	display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.page-navigation ul li a{
+	position: relative;
+    display: block;
+    margin: 1px;
+    height: 24px;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+	text-align: center;
+	background: rgb(255, 155, 115);
+    color: rgb(166, 47, 0);
+}
+
+.page-navigation ul li a:hover{
+	background: rgb(166, 47, 0);
+	color: #ccc;
+}
+
+.page-navigation ul li a.select{
+	background: rgb(166, 47, 0);
+    color: rgb(255, 155, 115);
+}
+
+.page-foot {
+	z-index: 0;
+}
+
+.page-box3{
+	margin: 0 auto;	
+	padding: 2px 2px;
+	background-color: #ffffff;
+}
+
+.page-foot .copy {	
+	font-size: 12px;
+	text-align: center;
+	color:rgb(166, 47, 0);
+	background-color: rgb(255, 155, 115);	
+	padding:5px 0;
+	border-top: 1px solid rgb(255, 73, 0);
+	border-bottom: 1px solid rgb(255, 73, 0);
+	line-height: 20px;
+}

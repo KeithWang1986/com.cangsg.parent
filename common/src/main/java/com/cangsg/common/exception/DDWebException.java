@@ -1,0 +1,9 @@
+package com.cangsg.common.exception;
+
+public class DDWebException extends Exception {
+	private static final long serialVersionUID = 1L;
+
+	public DDWebException(String message) {
+		super(message);
+	}
+}

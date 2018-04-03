@@ -8,7 +8,7 @@ const config = {
     devtool: 'cheap-module-source-map',
     entry: file_list,
     output: {
-        path: resolveApp('src/main/resources/static/dist'),
+        path: resolveApp('web/src/main/resources/static/dist'),
         filename: '[name].js'
     },
     module: {

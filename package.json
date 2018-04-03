@@ -1,5 +1,5 @@
 {
-  "name": "com.cangsg.web",
+  "name": "com.cangsg.parent",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -14,6 +14,7 @@
     "dd-button": "^1.0.9",
     "dd-common": "^1.0.9",
     "dd-locale": "^1.0.4",
+    "draft-js": "^0.10.5",
     "object-assign": "^4.1.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

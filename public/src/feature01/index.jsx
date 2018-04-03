@@ -11,6 +11,21 @@ import store from './Store.js';
 import { view as CitySelector } from './city_selector/';
 import { view as Weather } from './weather/';
 
+import { Editor, EditorState } from 'draft-js';
+
+class MyEditor extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { editorState: EditorState.createEmpty() };
+        this.onChange = (editorState) => this.setState({ editorState });
+    }
+    render() {
+        return (
+            <Editor editorState={this.state.editorState} onChange={this.onChange} />
+        );
+    }
+}
+
 class App extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -42,8 +57,9 @@ class App extends React.Component {
                 <Provider store={store}>
                     <LocaleProvider locale={this.state.locale}>
                         {/* <CitySelector />
-                        <Weather /> */}
-                        <h1>123</h1>
+                        <Weather /> */} 
+                        <MyEditor />
+                        <h1>1234</h1>
                         <Button value="Button.confirm" onClick={(props, e) => this.OnClick(zh_CN)} />
                         <Button value="Button.cancel" onClick={(props, e) => this.OnClick(en_US)} />
                     </LocaleProvider>
